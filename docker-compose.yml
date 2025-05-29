@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  shapeservice:
+    build: .
+    container_name: shape_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/usr/src/app/app
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/usr/src/app
